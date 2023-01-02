@@ -1,6 +1,12 @@
-from django.contrib import admin
 from django.urls import path
+from rest_framework.routers import DefaultRouter
+from .views import TutorialMVS
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+router=DefaultRouter()
+router.register("tutorials",TutorialMVS)
+
+# urlpatterns = [
+    # path(),
+# ]
+
+urlpatterns=router.urls
